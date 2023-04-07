@@ -95,6 +95,7 @@ public class MainActivity extends AppCompatActivity {
         startBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                progressBar.setVisibility(View.INVISIBLE);
                 startStop();
                 Toast.makeText(MainActivity.this, "When the counter has time... You are good!!", Toast.LENGTH_SHORT).show();
             }
@@ -115,11 +116,9 @@ public class MainActivity extends AppCompatActivity {
 
             mySong.release();
             stopTimer();
-            startBtn.setTextColor(ContextCompat.getColor(this, R.color.white));
 
         } else {
             resumeStart();
-            startBtn.setTextColor(ContextCompat.getColor(this, R.color.grey));
         }
     }
 
@@ -141,9 +140,10 @@ public class MainActivity extends AppCompatActivity {
                 selectedTime3.setText("");
                 selectedTime4.setText("");
                 selectedTime5.setText("");
+                startBtn.setTextColor(ContextCompat.getColor(this, R.color.grey));
             }
         } else {
-            startBtn.setText("RESUME");
+            startBtn.setText("RESUMED");
             timeLeftInMilliSeconds = reShared;
             startTimer();
             selectedTime1.setText("");
@@ -151,6 +151,7 @@ public class MainActivity extends AppCompatActivity {
             selectedTime3.setText("");
             selectedTime4.setText("");
             selectedTime5.setText("");
+            startBtn.setTextColor(ContextCompat.getColor(this, R.color.grey));
         }
     }
 
@@ -167,10 +168,9 @@ public class MainActivity extends AppCompatActivity {
                 timeLeftText = "" + minutes;
                 timeLeftText += ":";
 
-                if (seconds < 10) {
+                if (seconds < 10)
                     timeLeftText += "0";
                     timeLeftText += seconds;
-                }
 
                 countDown.setText("Time remaining: " + timeLeftText);
                 mySong.start();
