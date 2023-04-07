@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/timerC1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00"
+        android:layout_marginLeft="110dp"
+        android:layout_marginTop="40dp"
+        android:textSize="50sp" />
+    <TextView
+        android:id="@+id/timerC2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=":"
+        android:layout_marginLeft="166dp"
+        android:layout_marginTop="40dp"
+        android:textSize="50sp" />
+    <TextView
+        android:id="@+id/timerC3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00"
+        android:layout_marginLeft="177dp"
+        android:layout_marginTop="40dp"
+        android:textSize="50sp" />
+    <TextView
+        android:id="@+id/timerC4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=":"
+        android:layout_marginLeft="233dp"
+        android:layout_marginTop="40dp"
+        android:textSize="50sp" />
+    <TextView
+        android:id="@+id/timerC5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00"
+        android:layout_marginLeft="244dp"
+        android:layout_marginTop="40dp"
+        android:textSize="50sp" />
+
+    <ProgressBar
+        android:id="@+id/progressB"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:indeterminateOnly="false"
+        android:progressDrawable="@drawable/circle"
+        android:layout_marginLeft="132dp"
+        android:layout_marginTop="95dp"
+        android:minWidth="70dp"
+        android:minHeight="70dp" />
+
+    <TextView
+        android:id="@+id/counter"
+        android:layout_width="436dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="230dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="30dp"
+        android:layout_weight="1"
+        android:text=""
+        android:textAlignment="center"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+    <NumberPicker
+        android:id="@+id/nopicker3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="320dp"
+        android:saveEnabled="false"/>
+
+    <NumberPicker
+        android:id="@+id/nopicker2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="180dp"
+        android:layout_marginTop="320dp"/>
+
+    <NumberPicker
+        android:id="@+id/nopicker1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="260dp"
+        android:layout_marginTop="320dp"/>
+
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="520dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="1"
+        android:text="START" />
+
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="220dp"
+        android:layout_marginTop="520dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="1"
+        android:text="CLOSE" />
+
+</RelativeLayout>
